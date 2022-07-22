@@ -37,5 +37,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.antlr:antlr4-runtime:4.10" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.29" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.19.4" level="project" />
+    <orderEntry type="library" name="Maven: javax.persistence:javax.persistence-api:2.2" level="project" />
   </component>
 </module>

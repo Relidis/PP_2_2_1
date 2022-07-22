@@ -2,20 +2,25 @@ package hiber.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "cars")
-public class Car {
+public class Car implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(optional=false, mappedBy="user")
+    @OneToOne(optional=false, mappedBy="car")
     private User user;
     @Column(name = "model")
     private String model;
     @Column(name = "series")
     private int series;
+
+    public Car() {
+    }
 
     public Car(String model, int series) {
         this.model = model;
@@ -60,8 +65,6 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "id=" + id +
-                ", user=" + user +
                 ", model='" + model + '\'' +
                 ", series=" + series +
                 '}';

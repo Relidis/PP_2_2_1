@@ -28,7 +28,7 @@ public class AppConfig {
 
    public AppConfig(Environment env) {
       this.env = env;
-   }
+  }
 
    @Bean
    public DataSource getDataSource() {
